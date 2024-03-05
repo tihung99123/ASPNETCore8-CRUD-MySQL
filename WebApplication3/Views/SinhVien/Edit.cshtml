@@ -1,0 +1,36 @@
+﻿@model SinhVienModel
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<form method="post" asp-action="Edit">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Tạo</h2>
+            <hr />
+        </div>
+        <div class="mb-3">
+            <label asp-for="MaSinhVien" hidden> Mã Sinh Viên</label>
+            <input asp-for="MaSinhVien" class="form-control" hidden />
+        </div>
+        <div class="mb-3">
+            <label asp-for="HoVaTen">Họ Và Tên</label>
+            <input asp-for="HoVaTen" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Lop">Lớp</label>
+            <input asp-for="Lop" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Khoa">Khoa</label>
+            <input asp-for="Khoa" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="SoDienThoai">Số Điện Thoại</label>
+            <input asp-for="SoDienThoai" class="form-control" />
+        </div>
+        <button type="submit" class="btn btn-primary">Tạo</button>
+    </div>
+
+</form>
+

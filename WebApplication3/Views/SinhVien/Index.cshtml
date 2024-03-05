@@ -1,0 +1,55 @@
+﻿@model IEnumerable<SinhVienModel>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<a asp-controller="SinhVien" asp-action="Create" class="btn btn-primary">Tạo</a>
+<table class="table table-bordered table-striped" width="100%">
+    <thead>
+        <tr>
+            <th>
+                Mã Sinh Viên
+                </th>
+                <th>
+                    Họ Và Tên
+                </th>
+                <th>
+                    Lớp
+                </th>
+                <th>
+                    Khoa
+                </th>
+                <th>
+                    Số Điện Thoại
+                </th>
+                <th>
+
+                </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var obj in Model){
+            <tr>
+                <td>
+                    @obj.MaSinhVien
+                </td>
+                <td>
+                    @obj.HoVaTen
+                </td>
+                <td>
+                    @obj.Lop
+                </td>
+                <td>
+                    @obj.Khoa
+                </td>
+                <td>
+                    @obj.SoDienThoai
+                </td>
+                <td>
+                    <a asp-controller="SinhVien" asp-action="Edit" asp-route-maSinhVien="@obj.MaSinhVien" class="btn btn-secondary">Sửa</a>
+                    <a asp-controller="SinhVien" asp-action="Delete" asp-route-maSinhVien="@obj.MaSinhVien" class="btn btn-danger">Xóa</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
